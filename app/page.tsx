@@ -1,6 +1,31 @@
 import Link from "next/link";
 
+const categoryStyles: Record<string, string> = {
+  Natur: "bg-green-100 text-green-800",
+  "Natur & Gesundheit": "bg-emerald-100 text-emerald-800",
+  Wohnen: "bg-sky-100 text-sky-800",
+  Lifestyle: "bg-violet-100 text-violet-800",
+  Finanzen: "bg-amber-100 text-amber-800",
+  Investment: "bg-orange-100 text-orange-800",
+};
+
 const articles = [
+  {
+    slug: "naturlandschaften-deutschland",
+    title: "Naturlandschaften Deutschland: Die schönsten Orte abseits der Touristenpfade",
+    excerpt:
+      "Deutschland ist landschaftlich vielfältiger als sein Ruf. Wir zeigen die schönsten, noch unbekannten Naturlandschaften – für alle die echte Stille suchen.",
+    date: "9. Juni 2026",
+    category: "Natur",
+  },
+  {
+    slug: "waldbaden-shinrin-yoku",
+    title: "Waldbaden: Was der japanische Trend Shinrin-Yoku wirklich bringt",
+    excerpt:
+      "Einfach durch den Wald gehen – klingt banal. Doch Shinrin-Yoku ist durch Studien belegt und beruhigt das Nervensystem nachweislich. Was steckt wirklich dahinter?",
+    date: "5. Juni 2026",
+    category: "Natur & Gesundheit",
+  },
   {
     slug: "van-life-mobiles-wohnen",
     title: "Van Life: Wohnen auf Rädern – Freiheit oder Illusion?",
@@ -51,46 +76,79 @@ const articles = [
   },
 ];
 
+const [featured, ...rest] = articles;
+
 export default function Home() {
   return (
-    <div className="max-w-3xl mx-auto px-6 py-12">
-      <div className="mb-12">
-        <h1 className="text-3xl font-bold text-zinc-900 mb-3">
-          Wohnen, Leben und Investieren – neu gedacht
+    <div className="max-w-4xl mx-auto px-6 py-12">
+
+      {/* Hero */}
+      <div className="mb-14 text-center">
+        <h1 className="text-4xl font-bold text-stone-900 mb-4 tracking-tight leading-tight">
+          Wohnen, Leben und Investieren –{" "}
+          <span className="text-green-700">neu gedacht</span>
         </h1>
-        <p className="text-lg text-zinc-500 leading-relaxed">
+        <p className="text-lg text-stone-500 max-w-xl mx-auto leading-relaxed">
           Alltag mal anders begleitet Menschen, die ihr Leben bewusst gestalten
-          wollen: alternative Wohnformen, nachhaltiger Lebensstil und smarte
-          Entscheidungen für die Zukunft.
+          wollen: Natur, alternative Wohnformen und smarte Entscheidungen.
         </p>
       </div>
 
-      <div className="flex flex-col divide-y divide-zinc-100">
-        {articles.map((article) => (
-          <article key={article.slug} className="py-8">
-            <div className="flex items-center gap-3 mb-3">
-              <span className="text-xs font-medium uppercase tracking-widest text-zinc-400">
+      {/* Featured article */}
+      <Link
+        href={`/${featured.slug}`}
+        className="group block bg-white rounded-2xl border border-stone-200 p-8 mb-10 hover:border-green-300 hover:shadow-md transition-all"
+      >
+        <div className="flex items-center gap-3 mb-4">
+          <span
+            className={`text-xs font-semibold px-2.5 py-1 rounded-full ${
+              categoryStyles[featured.category] ?? "bg-stone-100 text-stone-600"
+            }`}
+          >
+            {featured.category}
+          </span>
+          <span className="text-xs text-stone-400">{featured.date}</span>
+          <span className="ml-auto text-xs font-medium text-green-700 bg-green-50 px-2 py-0.5 rounded-full">
+            Aktuell
+          </span>
+        </div>
+        <h2 className="text-2xl font-bold text-stone-900 mb-3 leading-snug group-hover:text-green-800 transition-colors">
+          {featured.title}
+        </h2>
+        <p className="text-stone-500 leading-relaxed mb-4">{featured.excerpt}</p>
+        <span className="text-sm font-semibold text-green-700 group-hover:underline">
+          Artikel lesen →
+        </span>
+      </Link>
+
+      {/* Article grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        {rest.map((article) => (
+          <Link
+            key={article.slug}
+            href={`/${article.slug}`}
+            className="group bg-white rounded-xl border border-stone-200 p-6 hover:border-green-300 hover:shadow-sm transition-all flex flex-col"
+          >
+            <div className="flex items-center gap-2 mb-3">
+              <span
+                className={`text-xs font-semibold px-2 py-0.5 rounded-full ${
+                  categoryStyles[article.category] ?? "bg-stone-100 text-stone-600"
+                }`}
+              >
                 {article.category}
               </span>
-              <span className="text-xs text-zinc-300">·</span>
-              <time className="text-xs text-zinc-400">{article.date}</time>
+              <span className="text-xs text-stone-400">{article.date}</span>
             </div>
-            <h2 className="text-xl font-semibold text-zinc-900 mb-2 leading-snug">
-              <Link
-                href={`/${article.slug}`}
-                className="hover:text-zinc-600 transition-colors"
-              >
-                {article.title}
-              </Link>
+            <h2 className="text-base font-bold text-stone-900 mb-2 leading-snug group-hover:text-green-800 transition-colors flex-1">
+              {article.title}
             </h2>
-            <p className="text-zinc-500 leading-relaxed mb-4">{article.excerpt}</p>
-            <Link
-              href={`/${article.slug}`}
-              className="text-sm font-medium text-zinc-700 hover:text-zinc-900 transition-colors"
-            >
+            <p className="text-sm text-stone-500 leading-relaxed line-clamp-3 mb-4">
+              {article.excerpt}
+            </p>
+            <span className="text-xs font-semibold text-green-700 group-hover:underline mt-auto">
               Weiterlesen →
-            </Link>
-          </article>
+            </span>
+          </Link>
         ))}
       </div>
     </div>
