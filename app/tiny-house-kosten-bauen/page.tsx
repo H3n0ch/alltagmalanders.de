@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Tiny House selbst bauen: Was kostet das wirklich? – Alltag mal anders",
   description:
     "Tiny House bauen klingt günstig – doch Grundstück, Genehmigung und Ausbau summieren sich schnell. Ein realistischer Blick auf die tatsächlichen Kosten.",
 };
+
+const linkClass = "font-medium text-zinc-900 underline underline-offset-2 hover:text-zinc-600 transition-colors";
 
 export default function TinyHouseKostenBauen() {
   return (
@@ -16,6 +19,17 @@ export default function TinyHouseKostenBauen() {
         </span>
         <span className="text-xs text-zinc-300">·</span>
         <time className="text-xs text-zinc-400">29. Mai 2026</time>
+      </div>
+
+      <div className="relative w-full h-72 sm:h-96 mb-8 rounded-2xl overflow-hidden">
+        <Image
+          src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1200&q=80&auto=format&fit=crop"
+          alt="Kleines Holzhaus in der Natur"
+          fill
+          className="object-cover"
+          preload
+        />
+        <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
       </div>
 
       <h1 className="text-3xl font-bold text-zinc-900 mb-4 leading-tight">
@@ -31,13 +45,17 @@ export default function TinyHouseKostenBauen() {
 
       <div className="prose-zinc space-y-6 text-zinc-700 leading-relaxed">
         <p>
-          Tiny Houses gelten als erschwingliche Alternative zum klassischen
-          Eigenheim. Und tatsächlich sind die reinen Baukosten überschaubar:
-          Ein solide gebautes Tiny House auf Rädern kostet vom Hersteller
-          zwischen 40.000 und 90.000 Euro – je nach Ausstattung, Material und
-          Größe. Wer handwerklich begabt ist und Eigenleistung einbringt, kann
-          deutlich darunter bleiben. Die eigentlichen Kostentreiber liegen
-          jedoch woanders.
+          Die{" "}
+          <a href="https://de.wikipedia.org/wiki/Tiny_House" className={linkClass} target="_blank" rel="noopener noreferrer">
+            Tiny-House-Bewegung
+          </a>{" "}
+          hat sich aus den USA nach Europa ausgebreitet und gilt als Antwort
+          auf steigende Immobilienpreise und den Wunsch nach einem bewussteren
+          Leben. Die reinen Baukosten sind tatsächlich überschaubar: Ein solide
+          gebautes Tiny House auf Rädern kostet vom Hersteller zwischen 40.000
+          und 90.000 Euro – je nach Ausstattung, Material und Größe. Wer
+          handwerklich begabt ist und Eigenleistung einbringt, kann deutlich
+          darunter bleiben. Die eigentlichen Kostentreiber liegen jedoch woanders.
         </p>
 
         <h2 className="text-xl font-semibold text-zinc-900 mt-10">
@@ -50,7 +68,13 @@ export default function TinyHouseKostenBauen() {
           Das schränkt die Auswahl erheblich ein. Campingplätze bieten eine
           günstige Übergangslösung, sind aber für dauerhaftes Wohnen oft nicht
           zugelassen. Manche Kommunen haben spezielle Tiny-House-Gebiete
-          ausgewiesen, doch diese sind bundesweit noch die Ausnahme.
+          ausgewiesen, doch diese sind bundesweit noch die Ausnahme. Laut{" "}
+          <a href="https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Wohnen/_inhalt.html" className={linkClass} target="_blank" rel="noopener noreferrer">
+            Statistischem Bundesamt
+          </a>{" "}
+          kostete eine Neubauwohnung in deutschen Großstädten 2024 im Schnitt
+          über 5.000 Euro pro Quadratmeter – Tiny Houses bieten hier eine
+          echte Alternative.
         </p>
 
         <h2 className="text-xl font-semibold text-zinc-900 mt-10">
@@ -70,12 +94,17 @@ export default function TinyHouseKostenBauen() {
           schlüsselfertige Modelle anbieten. Plattformen wie{" "}
           <a
             href="https://tinyhouse.investments/wissen/iab-tiny-house"
-            className="font-medium text-zinc-900 underline underline-offset-2 hover:text-zinc-600 transition-colors"
+            className={linkClass}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             tinyhouse.investments
           </a>{" "}
-          erklären detailliert, wie solche Modelle funktionieren und was
-          Interessierte bei der Planung beachten sollten.
+          erklären detailliert, wie solche Modelle funktionieren. Die{" "}
+          <a href="https://www.verbraucherzentrale.de/wissen/umwelt-haushalt/wohnen/tiny-houses-guenstiger-wohnen-im-minihaus-49751" className={linkClass} target="_blank" rel="noopener noreferrer">
+            Verbraucherzentrale
+          </a>{" "}
+          informiert zusätzlich unabhängig über Fallstricke beim Kauf.
         </p>
 
         <h2 className="text-xl font-semibold text-zinc-900 mt-10">

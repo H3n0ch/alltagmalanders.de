@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Frugal Living: Wie weniger Ausgaben mehr Lebensqualität bringt – Alltag mal anders",
   description:
     "Frugal Living bedeutet nicht Verzicht um jeden Preis – sondern bewusstes Ausgeben. Wie der Lebensstil funktioniert und welche Stellschrauben wirklich zählen.",
 };
+
+const linkClass = "font-medium text-zinc-900 underline underline-offset-2 hover:text-zinc-600 transition-colors";
 
 export default function FrugalLivingSparenAlltag() {
   return (
@@ -16,6 +19,17 @@ export default function FrugalLivingSparenAlltag() {
         </span>
         <span className="text-xs text-zinc-300">·</span>
         <time className="text-xs text-zinc-400">26. Mai 2026</time>
+      </div>
+
+      <div className="relative w-full h-72 sm:h-96 mb-8 rounded-2xl overflow-hidden">
+        <Image
+          src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=1200&q=80&auto=format&fit=crop"
+          alt="Minimalistisches helles Apartment-Interieur"
+          fill
+          className="object-cover"
+          preload
+        />
+        <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
       </div>
 
       <h1 className="text-3xl font-bold text-zinc-900 mb-4 leading-tight">
@@ -30,37 +44,64 @@ export default function FrugalLivingSparenAlltag() {
 
       <div className="prose-zinc space-y-6 text-zinc-700 leading-relaxed">
         <p>
-          Die Idee hinter Frugal Living ist einfach: Wer weniger für Dinge
-          ausgibt, die ihn nicht wirklich glücklich machen, hat mehr Ressourcen
-          für das, was ihm wichtig ist. Das kann finanzielle Unabhängigkeit
-          sein, frühere Rente, mehr Reisefreiheit oder einfach weniger
-          Stress im Alltag. Frugal Living ist kein Dogma – es ist ein Werkzeug.
+          Die Idee hinter{" "}
+          <a href="https://de.wikipedia.org/wiki/Frugalismus" className={linkClass} target="_blank" rel="noopener noreferrer">
+            Frugal Living
+          </a>{" "}
+          ist einfach: Wer weniger für Dinge ausgibt, die ihn nicht wirklich
+          glücklich machen, hat mehr Ressourcen für das, was ihm wichtig ist.
+          Das kann finanzielle Unabhängigkeit sein, frühere Rente, mehr
+          Reisefreiheit oder einfach weniger Stress im Alltag. Frugal Living
+          ist kein Dogma – es ist ein Werkzeug.
         </p>
 
         <h2 className="text-xl font-semibold text-zinc-900 mt-10">
-          Die größten Kostenhebel im Alltag
+          Wohnen als größter Hebel
         </h2>
         <p>
           Wer anfängt, seine Ausgaben zu analysieren, stößt meist auf dieselben
           drei Kategorien: Wohnen, Mobilität und Ernährung. Diese drei Posten
           machen in deutschen Haushalten oft 60 bis 70 Prozent der monatlichen
-          Ausgaben aus. Kleine Optimierungen beim Kaffeekauf fallen dagegen
-          kaum ins Gewicht.
+          Ausgaben aus. Beim Wohnen lohnt es sich, radikal zu hinterfragen:
+          Brauche ich wirklich 90 Quadratmeter? Laut{" "}
+          <a href="https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Wohnen/_inhalt.html" className={linkClass} target="_blank" rel="noopener noreferrer">
+            Statistischem Bundesamt
+          </a>{" "}
+          liegt die durchschnittliche Wohnfläche in Deutschland bei 47 Quadratmetern
+          pro Person – mit steigender Tendenz, obwohl die Haushalte immer kleiner
+          werden.
         </p>
         <p>
-          Beim Wohnen lohnt es sich, radikal zu hinterfragen: Brauche ich
-          wirklich 90 Quadratmeter? Eine kleinere Wohnung, eine WG oder
-          alternative Wohnformen können die Mietlast erheblich senken. Wer
-          dabei an Tiny Houses als dauerhaft günstigere Wohnlösung denkt,
-          findet auf{" "}
+          Eine kleinere Wohnung, eine WG oder alternative Wohnformen können die
+          Mietlast erheblich senken. Wer dabei an Tiny Houses als dauerhaft
+          günstigere Wohnlösung denkt, findet auf{" "}
           <a
             href="https://tinyhouse.investments/steuervorteil"
-            className="font-medium text-zinc-900 underline underline-offset-2 hover:text-zinc-600 transition-colors"
+            className={linkClass}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             tinyhouse.investments
           </a>{" "}
-          interessante Informationen dazu, wie sich alternative Wohnformen auch
-          steuerlich positiv auswirken können.
+          Informationen dazu, wie sich alternative Wohnformen auch steuerlich
+          positiv auswirken können. Die{" "}
+          <a href="https://www.verbraucherzentrale.de/wissen/geld-versicherungen/sparen-und-anlegen" className={linkClass} target="_blank" rel="noopener noreferrer">
+            Verbraucherzentrale
+          </a>{" "}
+          bietet ergänzend unabhängige Beratung zu Spar- und Anlagestrategien.
+        </p>
+
+        <h2 className="text-xl font-semibold text-zinc-900 mt-10">
+          Mieten oder kaufen – die Frugal-Living-Perspektive
+        </h2>
+        <p>
+          Im deutschen Immobilienmarkt lohnt sich Kaufen in vielen Regionen erst
+          nach 15 bis 20 Jahren. Frugal Living bedeutet deshalb nicht automatisch,
+          Eigentum anzustreben – sondern zu fragen: Was kostet mich mein Wohnen
+          wirklich, und gibt es Alternativen, die dasselbe Wohlbefinden für
+          weniger Geld bieten? Tiny Houses, WG-Wohnen im Alter, Hausboote oder
+          gemeinschaftliche Wohnprojekte sind Antworten, die immer mehr Menschen
+          ernsthaft prüfen.
         </p>
 
         <h2 className="text-xl font-semibold text-zinc-900 mt-10">
@@ -70,15 +111,9 @@ export default function FrugalLivingSparenAlltag() {
           Frugal Living bedeutet nicht, auf alles zu verzichten. Es bedeutet,
           Prioritäten zu setzen. Wer gerne gut isst, gibt dort Geld aus – und
           spart dafür beim Streaming-Abo oder der unnötigen Jahresgebühr einer
-          Kreditkarte. Wer Wert auf Reisen legt, lebt günstiger zu Hause –
-          und plant trotzdem zwei Mal im Jahr eine Reise ein.
-        </p>
-        <p>
-          Das Werkzeug dafür ist ein einfaches Haushaltsbuch. Nicht als
-          Instrument der Selbstkontrolle, sondern als Spiegel: Wo fließt
-          mein Geld wirklich hin? Entspricht das meinen Werten? Viele Menschen
-          sind überrascht, wie viel Geld monatlich in Ausgaben fließt, an die
-          sie sich hinterher kaum erinnern.
+          Kreditkarte. Das Werkzeug dafür ist ein einfaches Haushaltsbuch.
+          Nicht als Instrument der Selbstkontrolle, sondern als Spiegel: Wo
+          fließt mein Geld wirklich hin?
         </p>
 
         <h2 className="text-xl font-semibold text-zinc-900 mt-10">
@@ -89,12 +124,9 @@ export default function FrugalLivingSparenAlltag() {
           20 Jahre anlegt, hat – bei einer durchschnittlichen Rendite von
           5 Prozent – am Ende über 120.000 Euro mehr auf dem Konto. Das ist
           kein Hexenwerk. Es ist der Effekt von konsequentem, bewusstem
-          Wirtschaften über Zeit.
-        </p>
-        <p>
-          Frugal Living ist deshalb kein Lifestyle für Geizige – es ist eine
-          der wirksamsten Strategien für langfristige finanzielle Freiheit.
-          Ohne Verzicht auf Lebensqualität, wenn man die richtigen Hebel kennt.
+          Wirtschaften über Zeit. Frugal Living ist deshalb eine der wirksamsten
+          Strategien für langfristige finanzielle Freiheit – ohne Verzicht auf
+          Lebensqualität, wenn man die richtigen Hebel kennt.
         </p>
 
         <h2 className="text-xl font-semibold text-zinc-900 mt-10">

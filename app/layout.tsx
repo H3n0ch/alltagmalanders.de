@@ -9,23 +9,23 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Alltag mal anders – Wohnen, Leben und Investieren neu gedacht",
+  title: "Alltag mal anders – Der Blog für alternative Immobilien",
   description:
-    "Alltag mal anders ist ein deutsches Lifestyle-Magazin über alternatives Wohnen, Nachhaltigkeit, Minimalismus und smarte Investments.",
+    "Tiny Houses, Van Life, Minimalismus und clevere Investments: Alltag mal anders ist der Blog für alternative Immobilien – ehrlich, praktisch und unabhängig.",
   openGraph: {
     type: "website",
     locale: "de_DE",
     url: "https://alltagmalanders.de",
     siteName: "Alltag mal anders",
-    title: "Alltag mal anders – Wohnen, Leben und Investieren neu gedacht",
+    title: "Alltag mal anders – Der Blog für alternative Immobilien",
     description:
-      "Alltag mal anders ist ein deutsches Lifestyle-Magazin über alternatives Wohnen, Nachhaltigkeit, Minimalismus und smarte Investments.",
+      "Tiny Houses, Van Life, Minimalismus und clevere Investments: Der Blog für alternatives Wohnen jenseits des Mainstreams.",
   },
   twitter: {
     card: "summary",
     title: "Alltag mal anders",
     description:
-      "Deutsches Lifestyle-Magazin über alternatives Wohnen, Nachhaltigkeit und smarte Investments.",
+      "Der Blog für alternative Immobilien: Tiny Houses, Van Life, Minimalismus und smarte Investments.",
   },
   icons: {
     icon: "/logo.svg",
@@ -110,7 +110,7 @@ export default function RootLayout({
                 <div>
                   <p className="font-semibold text-stone-900 text-sm">Alltag mal anders</p>
                   <p className="text-xs text-stone-500 mt-0.5">
-                    Wohnen, Leben und Investieren neu gedacht
+                    Der Blog für alternative Immobilien
                   </p>
                 </div>
               </div>

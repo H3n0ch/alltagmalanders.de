@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Nachhaltiger Lebensstil 2026 – Alltag mal anders",
   description:
     "Nachhaltigkeit ist kein Trend mehr, sondern eine Haltung. Welche konkreten Schritte im Alltag wirklich etwas bewirken.",
 };
+
+const linkClass = "font-medium text-zinc-900 underline underline-offset-2 hover:text-zinc-600 transition-colors";
 
 export default function NachhaltigerLebensstil() {
   return (
@@ -18,15 +21,29 @@ export default function NachhaltigerLebensstil() {
         <time className="text-xs text-zinc-400">18. Mai 2026</time>
       </div>
 
+      <div className="relative w-full h-72 sm:h-96 mb-8 rounded-2xl overflow-hidden">
+        <Image
+          src="https://images.unsplash.com/photo-1416339306562-f3d12fefd36f?w=1200&q=80&auto=format&fit=crop"
+          alt="Nachhaltiges Wohnen mit Pflanzen und natürlichem Licht"
+          fill
+          className="object-cover"
+          preload
+        />
+        <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
+      </div>
+
       <h1 className="text-3xl font-bold text-zinc-900 mb-4 leading-tight">
         Nachhaltiger Lebensstil 2026: Wie kleine Veränderungen große Wirkung
         erzielen
       </h1>
 
       <p className="text-lg text-zinc-500 leading-relaxed mb-10 border-l-4 border-zinc-200 pl-4">
-        Nachhaltigkeit ist kein Trend mehr, sondern eine Haltung. Welche
-        konkreten Schritte im Alltag wirklich etwas bewirken – und welche nur
-        das Gewissen beruhigen.
+        <a href="https://de.wikipedia.org/wiki/Nachhaltigkeit" className={linkClass} target="_blank" rel="noopener noreferrer">
+          Nachhaltigkeit
+        </a>{" "}
+        ist kein Trend mehr, sondern eine Haltung. Welche konkreten Schritte
+        im Alltag wirklich etwas bewirken – und welche nur das Gewissen
+        beruhigen.
       </p>
 
       <div className="space-y-6 text-zinc-700 leading-relaxed">
@@ -42,8 +59,11 @@ export default function NachhaltigerLebensstil() {
           Die größten Hebel im Alltag
         </h2>
         <p>
-          Nicht jede nachhaltige Maßnahme ist gleich wirkungsvoll. Studien
-          zeigen immer wieder, dass bestimmte Entscheidungen den persönlichen
+          Nicht jede nachhaltige Maßnahme ist gleich wirkungsvoll. Das{" "}
+          <a href="https://www.umweltbundesamt.de/themen/klima-energie/klimaschutz-energiepolitik-in-deutschland/treibhausgas-emissionen" className={linkClass} target="_blank" rel="noopener noreferrer">
+            Umweltbundesamt
+          </a>{" "}
+          zeigt in seinen Daten, dass bestimmte Entscheidungen den persönlichen
           CO₂-Fußabdruck weit stärker reduzieren als andere. An erster Stelle
           steht das Thema Mobilität: Wer ein Mal pro Woche auf das Auto
           verzichtet und stattdessen das Fahrrad oder den öffentlichen
@@ -53,14 +73,12 @@ export default function NachhaltigerLebensstil() {
         <p>
           An zweiter Stelle folgt die Ernährung. Eine Reduktion des Fleischkonsums
           – auch ohne vollständige Veganisierung – hat messbare Auswirkungen auf
-          den Ressourcenverbrauch. Das bedeutet nicht, dass man aufhören muss,
-          gelegentlich Fleisch zu essen. Aber wer statt sieben Fleischmahlzeiten
-          pro Woche auf drei oder vier kommt, macht bereits einen bedeutenden
-          Unterschied.
+          den Ressourcenverbrauch. Wer statt sieben Fleischmahlzeiten pro Woche
+          auf drei oder vier kommt, macht bereits einen bedeutenden Unterschied.
         </p>
 
         <h2 className="text-xl font-semibold text-zinc-900 mt-10">
-          Zuhause: Wo sich nachhaltige Entscheidungen lohnen
+          Wohnen als Nachhaltigkeitsfaktor
         </h2>
         <p>
           Im eigenen Zuhause bietet vor allem die Energie einen großen Hebel.
@@ -71,11 +89,12 @@ export default function NachhaltigerLebensstil() {
           und Kosten.
         </p>
         <p>
-          Beim Konsum lohnt es sich, vor jedem Kauf zu fragen: Brauche ich das
-          wirklich, und wenn ja – gibt es eine gebrauchte Alternative? Plattformen
-          für Secondhand-Käufe haben sich in den letzten Jahren stark
-          professionalisiert. Ob Kleidung, Elektronik oder Möbel – vieles lässt
-          sich heute gebraucht in sehr gutem Zustand finden.
+          Besonders wirkungsvoll ist die Wahl der Wohnform selbst. Kleinere
+          Wohnungen bedeuten weniger Fläche zum Heizen, weniger Möbel, weniger
+          Verbrauch. Kein Wunder, dass alternative Wohnkonzepte wie Tiny Houses,
+          Co-Housing oder Wohnprojekte heute auch als nachhaltige
+          Immobilienentscheidungen diskutiert werden – nicht nur als
+          Lebensstil-Statement.
         </p>
 
         <h2 className="text-xl font-semibold text-zinc-900 mt-10">

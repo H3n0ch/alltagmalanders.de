@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Van Life: Wohnen auf Rädern – Freiheit oder Illusion? – Alltag mal anders",
   description:
     "Van Life klingt nach Freiheit, Abenteuer und günstigem Wohnen. Was steckt wirklich dahinter – und was kostet das Leben im Kastenwagen wirklich?",
 };
+
+const linkClass = "font-medium text-zinc-900 underline underline-offset-2 hover:text-zinc-600 transition-colors";
 
 export default function VanLifeMobilesWohnen() {
   return (
@@ -16,6 +19,17 @@ export default function VanLifeMobilesWohnen() {
         </span>
         <span className="text-xs text-zinc-300">·</span>
         <time className="text-xs text-zinc-400">2. Juni 2026</time>
+      </div>
+
+      <div className="relative w-full h-72 sm:h-96 mb-8 rounded-2xl overflow-hidden">
+        <Image
+          src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=1200&q=80&auto=format&fit=crop"
+          alt="Ausgebauter Campervan in der Natur"
+          fill
+          className="object-cover"
+          preload
+        />
+        <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
       </div>
 
       <h1 className="text-3xl font-bold text-zinc-900 mb-4 leading-tight">
@@ -36,6 +50,22 @@ export default function VanLifeMobilesWohnen() {
           Bindungen, kein überfüllter Kleiderschrank. Stattdessen: Flexibilität,
           Natur und das Gefühl, überall zu Hause sein zu können. Klingt gut –
           aber die Realität ist deutlich vielschichtiger.
+        </p>
+
+        <h2 className="text-xl font-semibold text-zinc-900 mt-10">
+          Van Life als Antwort auf den Wohnungsmarkt
+        </h2>
+        <p>
+          Dass Van Life zuletzt so stark gewachsen ist, hat auch strukturelle
+          Gründe. In deutschen Großstädten ist der Mietmarkt seit Jahren
+          angespannt: Laut{" "}
+          <a href="https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Wohnen/_inhalt.html" className={linkClass} target="_blank" rel="noopener noreferrer">
+            Statistischem Bundesamt
+          </a>{" "}
+          geben Mieter in Städten wie München oder Frankfurt im Schnitt über
+          30 Prozent ihres Nettoeinkommens für Wohnen aus. Der Van wird da für
+          manche zur radikalen Gegenbewegung: kein Vermieter, keine
+          Mieterhöhung, kein Wohnungsmarkt.
         </p>
 
         <h2 className="text-xl font-semibold text-zinc-900 mt-10">
@@ -65,21 +95,25 @@ export default function VanLifeMobilesWohnen() {
           riskiert Bußgelder. Viele Van-Lifer weichen deshalb auf offizielle
           Stellplätze aus oder nutzen Plattformen, die Privatgrundstücke
           vermitteln. In anderen europäischen Ländern – Spanien, Portugal,
-          Skandinavien – sind die Regeln deutlich liberaler.
+          Skandinavien – sind die Regeln deutlich liberaler. Das{" "}
+          <a href="https://www.bmwsb.bund.de/Webs/BMWSB/DE/themen/stadtentwicklung/wohnen/wohnen-node.html" className={linkClass} target="_blank" rel="noopener noreferrer">
+            Bundesministerium für Wohnen
+          </a>{" "}
+          diskutiert seit Jahren, wie alternative Wohnformen rechtlich
+          besser abgesichert werden könnten – bisher ohne klare Lösung.
         </p>
         <p>
           Ähnlich wie beim Van Life suchen viele Menschen nach alternativen
-          Wohnformen, die bezahlbar, flexibel und nachhaltig sind. Tiny Houses
+          Wohnformen, die bezahlbar, flexibel und nachhaltig sind.{" "}
+          <a href="https://de.wikipedia.org/wiki/Tiny_House" className={linkClass} target="_blank" rel="noopener noreferrer">
+            Tiny Houses
+          </a>{" "}
           bedienen denselben Wunsch – aber mit festem Fundament. Wer mehr über
-          die verschiedenen Modelle erfahren möchte, findet auf{" "}
-          <a
-            href="https://tinyhouse.investments"
-            className="font-medium text-zinc-900 underline underline-offset-2 hover:text-zinc-600 transition-colors"
-          >
+          die verschiedenen Investitionsmodelle erfahren möchte, findet auf{" "}
+          <a href="https://tinyhouse.investments" className={linkClass} target="_blank" rel="noopener noreferrer">
             tinyhouse.investments
           </a>{" "}
-          einen umfassenden Überblick über stationäre Alternativen zum
-          klassischen Wohnen.
+          einen Überblick über stationäre Alternativen zum klassischen Wohnen.
         </p>
 
         <h2 className="text-xl font-semibold text-zinc-900 mt-10">
@@ -108,8 +142,7 @@ export default function VanLifeMobilesWohnen() {
           mitbringt, kann mit dem Leben auf Rädern echte Freiheit erleben.
           Entscheidend ist: nicht den Instagram-Bildern nachjagen, sondern den
           eigenen Alltag ehrlich hinterfragen. Was brauche ich wirklich? Wie
-          viel Raum? Wie viel Bewegung? Die Antwort darauf ist für jeden
-          anders – und das ist gut so.
+          viel Raum? Die Antwort darauf ist für jeden anders – und das ist gut so.
         </p>
       </div>
 
