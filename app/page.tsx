@@ -8,9 +8,37 @@ const categoryStyles: Record<string, string> = {
   Lifestyle: "bg-violet-100 text-violet-800",
   Finanzen: "bg-amber-100 text-amber-800",
   Investment: "bg-orange-100 text-orange-800",
+  Immobilien: "bg-rose-100 text-rose-800",
 };
 
 const articles = [
+  {
+    slug: "mietpreise-deutschland-alternativen",
+    title: "Mietpreise 2026: Warum immer mehr Deutsche alternative Wohnformen wählen",
+    excerpt:
+      "Die Mieten in deutschen Großstädten steigen seit über einem Jahrzehnt schneller als die Löhne. Was das für Mieter bedeutet – und welche Alternativen wirklich funktionieren.",
+    date: "18. Juni 2026",
+    category: "Immobilien",
+    image: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1200&q=80&auto=format&fit=crop",
+  },
+  {
+    slug: "cohousing-gemeinschaftlich-wohnen",
+    title: "Cohousing: Warum Gemeinschaft günstiger wohnen lässt",
+    excerpt:
+      "Cohousing verbindet private Rückzugsräume mit geteilter Infrastruktur – und kann die Wohnkosten erheblich senken. Ein Überblick über das Modell und wo es in Deutschland funktioniert.",
+    date: "15. Juni 2026",
+    category: "Wohnen",
+    image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&q=80&auto=format&fit=crop",
+  },
+  {
+    slug: "hausboote-als-wohnform",
+    title: "Hausboote als Wohnform: Leben auf dem Wasser",
+    excerpt:
+      "Hausboote wirken auf den ersten Blick wie eine romantische Spinnerei. Doch für eine wachsende Zahl von Menschen sind sie eine ernsthafte, bezahlbare Alternative zum klassischen Immobilienmarkt.",
+    date: "12. Juni 2026",
+    category: "Wohnen",
+    image: "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=1200&q=80&auto=format&fit=crop",
+  },
   {
     slug: "naturlandschaften-deutschland",
     title: "Naturlandschaften Deutschland: Die schönsten Orte abseits der Touristenpfade",

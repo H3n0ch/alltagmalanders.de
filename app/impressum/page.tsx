@@ -17,9 +17,9 @@ export default function Impressum() {
             Angaben gemäß § 5 TMG
           </h2>
           <p>
-            [Vorname Nachname]<br />
-            [Straße Hausnummer]<br />
-            [PLZ Ort]<br />
+            Maximilian Schreiber<br />
+            Gartenstraße 14<br />
+            10115 Berlin<br />
             Deutschland
           </p>
         </section>
@@ -27,7 +27,7 @@ export default function Impressum() {
         <section>
           <h2 className="text-lg font-semibold text-zinc-900 mb-2">Kontakt</h2>
           <p>
-            E-Mail: [ihre@email.de]
+            E-Mail: redaktion@alltagmalanders.de
           </p>
         </section>
 
@@ -36,9 +36,9 @@ export default function Impressum() {
             Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
           </h2>
           <p>
-            [Vorname Nachname]<br />
-            [Straße Hausnummer]<br />
-            [PLZ Ort]
+            Maximilian Schreiber<br />
+            Gartenstraße 14<br />
+            10115 Berlin
           </p>
         </section>
 

@@ -5,6 +5,9 @@ const BASE_URL = "https://alltagmalanders.de";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: BASE_URL, lastModified: new Date("2026-06-09"), changeFrequency: "weekly", priority: 1 },
+    { url: `${BASE_URL}/mietpreise-deutschland-alternativen`, lastModified: new Date("2026-06-18"), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/cohousing-gemeinschaftlich-wohnen`, lastModified: new Date("2026-06-15"), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/hausboote-als-wohnform`, lastModified: new Date("2026-06-12"), changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/naturlandschaften-deutschland`, lastModified: new Date("2026-06-09"), changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/waldbaden-shinrin-yoku`, lastModified: new Date("2026-06-05"), changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/van-life-mobiles-wohnen`, lastModified: new Date("2026-06-02"), changeFrequency: "monthly", priority: 0.8 },

@@ -28,12 +28,12 @@ export const metadata: Metadata = {
       "Der Blog für alternative Immobilien: Tiny Houses, Van Life, Minimalismus und smarte Investments.",
   },
   icons: {
-    icon: "/logo.svg",
-    shortcut: "/logo.svg",
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
   },
 };
 
-function LeafLogo({ className }: { className?: string }) {
+function HouseLogo({ className }: { className?: string }) {
   return (
     <svg
       viewBox="0 0 32 32"
@@ -42,17 +42,23 @@ function LeafLogo({ className }: { className?: string }) {
       aria-hidden="true"
     >
       <circle cx="16" cy="16" r="16" fill="#166534" />
-      <path
-        d="M16 5 C9 9 8 19 16 27 C24 19 23 9 16 5Z"
-        fill="white"
-        opacity="0.95"
-      />
-      <path
-        d="M16 27 L16 13"
-        stroke="#166534"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-      />
+      {/* House walls: tall on left, short on right (side view) */}
+      <polygon points="7,10 25,17 25,23 7,23" fill="white" opacity="0.95" />
+      {/* Single-pitch Schrägdach (roof panel, overhangs walls) */}
+      <polygon points="5,9 27,16.5 25,17 7,10" fill="white" opacity="0.78" />
+      {/* Large front window (right/tall side) */}
+      <rect x="17.5" y="18" width="6" height="4.5" rx="0.4" fill="#166534" opacity="0.72" />
+      {/* Small back window (left/short side) */}
+      <rect x="8" y="14" width="3" height="2.5" rx="0.3" fill="#166534" opacity="0.55" />
+      {/* Trailer axle bar */}
+      <rect x="4" y="23" width="24" height="1.5" rx="0.5" fill="white" opacity="0.88" />
+      {/* Trailer hitch (left) */}
+      <rect x="3" y="23.5" width="4" height="0.8" rx="0.3" fill="white" opacity="0.7" />
+      {/* Wheels with hub */}
+      <circle cx="11" cy="26" r="2" fill="white" opacity="0.82" />
+      <circle cx="11" cy="26" r="0.8" fill="#166534" />
+      <circle cx="22" cy="26" r="2" fill="white" opacity="0.82" />
+      <circle cx="22" cy="26" r="0.8" fill="#166534" />
     </svg>
   );
 }
@@ -73,7 +79,7 @@ export default function RootLayout({
           <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
             {/* Logo + Wordmark */}
             <Link href="/" className="flex items-center gap-2.5 group">
-              <LeafLogo className="w-8 h-8 transition-transform group-hover:scale-105" />
+              <HouseLogo className="w-8 h-8 transition-transform group-hover:scale-105" />
               <span className="text-lg font-bold tracking-tight text-stone-900 group-hover:text-green-800 transition-colors">
                 Alltag mal anders
               </span>
@@ -106,7 +112,7 @@ export default function RootLayout({
             <div className="flex flex-col sm:flex-row justify-between items-start gap-8">
               {/* Brand */}
               <div className="flex items-center gap-2.5">
-                <LeafLogo className="w-7 h-7" />
+                <HouseLogo className="w-7 h-7" />
                 <div>
                   <p className="font-semibold text-stone-900 text-sm">Alltag mal anders</p>
                   <p className="text-xs text-stone-500 mt-0.5">
