@@ -58,6 +58,15 @@ const articles = [
     image: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=1200&q=80&auto=format&fit=crop",
   },
   {
+    slug: "klassische-immobilie-oder-alternative-wohnform-2026",
+    title: "Klassische Immobilie oder alternative Wohnform – was lohnt sich 2026 wirklich?",
+    excerpt:
+      "Ein ehrlicher Vergleich aus Maklersicht: Eigentumswohnung und Einfamilienhaus vs. Tiny House und Co. – was lohnt sich 2026 wirklich?",
+    date: "2. Juni 2026",
+    category: "Immobilien",
+    image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1200&q=80&auto=format&fit=crop",
+  },
+  {
     slug: "van-life-mobiles-wohnen",
     title: "Van Life: Wohnen auf Rädern – Freiheit oder Illusion?",
     excerpt:
