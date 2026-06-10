@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/waldbaden-shinrin-yoku`, lastModified: new Date("2026-06-05"), changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/klassische-immobilie-oder-alternative-wohnform-2026`, lastModified: new Date("2026-06-02"), changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/van-life-mobiles-wohnen`, lastModified: new Date("2026-06-02"), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE_URL}/tiny-house-steuern-sparen`, lastModified: new Date("2026-06-05"), changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/tiny-house-kosten-bauen`, lastModified: new Date("2026-05-29"), changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/frugal-living-sparen-alltag`, lastModified: new Date("2026-05-26"), changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/tiny-houses-als-kapitalanlage`, lastModified: new Date("2026-05-24"), changeFrequency: "monthly", priority: 0.8 },
